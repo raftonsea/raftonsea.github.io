@@ -1,4 +1,14 @@
-　　---
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+ 　　---
 　　layout: default
 　　title:  
 　　---
@@ -11,3 +21,5 @@
     </li>
   {% endfor %}
 </ul>
+</body>
+</html>

@@ -5,4 +5,4 @@
 　　　　{% endfor %}
 　　</ul>
 
- ${page} AA
+{{ page }} CC

@@ -1,20 +1,16 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 </head>
 <body>
- ¡¡¡¡---
-¡¡¡¡layout: default
-¡¡¡¡title:  
-¡¡¡¡---
-¡¡¡¡<h2>{{ page.title }}</h2>
-¡¡¡¡<p>×îÐÂÎÄÕÂ</p>
-¡¡<ul>
+ ã€€ã€€---
+ã€€ã€€layout: default
+ã€€ã€€title:  
+ã€€ã€€---
+ã€€ã€€<h2>{{ page.title }}</h2>
+ã€€ã€€<p>æœ€æ–°æ–‡ç« </p>
+ã€€<ul>
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>

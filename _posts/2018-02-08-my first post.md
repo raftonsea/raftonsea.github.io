@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "测试blog"
-date:  
+date:  2018-02-08 16:16:01 -0600
 categories: demo
 ---
 

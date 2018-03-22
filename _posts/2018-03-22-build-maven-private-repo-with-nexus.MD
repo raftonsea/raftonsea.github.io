@@ -17,8 +17,8 @@ nexus 也支持docker， 从docker hub 上直接拉取 oss 版本来安装也可
 
 {% highlight java %}
     nexus-2.14.5-02
-    sonatype-work
-}
+    sonatype-work 
+{% endhighlight %}
 
 nexus-2.14.5-02是主文件夹， sonatype-work 包含了nexus的数据， 比如日志、备份等信息。
 启动nexus之前， 需要确保对应的jdk版本匹配。如下图
@@ -43,7 +43,7 @@ nexus 默认自带了jetty作为web服务器，因此启动无错误后，直接
     runtime=${bundleBasedir}/nexus/WEB-INF 
     # orientdb buffer size in megabytes
     storage.diskCache.bufferSize=4096 
-}
+{% endhighlight %}
 
 我本地为8082 因此访问地址为： http://localhost:8082/nexus/ 登录页面如图：
 
@@ -63,7 +63,7 @@ nexus 默认自带了jetty作为web服务器，因此启动无错误后，直接
      hosted : 本地仓库
      proxy :  代理仓库
      virtual :  虚拟仓库
-}
+{% endhighlight %}
 
 hosted ： 可以理解为本地仓库，即我们自己搭建的私服仓库，比如公司内部自己开发了一个工程
 打成jar包后，即可提交到本地仓库中，这样本公司内部可以访问，而外界无法访问。
@@ -185,7 +185,7 @@ setting文件的内容为：
         
     </settings>
     
-}
+{% endhighlight %}
 
 上面配置文件的说明见官网：
 https://help.sonatype.com/repomanager2/maven-and-other-build-tools/apache-maven
@@ -230,7 +230,7 @@ https://help.sonatype.com/repomanager2/maven-and-other-build-tools/apache-maven
     </distributionManagement>
 
 </project>   
-}
+{% endhighlight %}
 
 
 

@@ -241,6 +241,7 @@ https://help.sonatype.com/repomanager2/maven-and-other-build-tools/apache-maven
 
 
 repositories : 中央仓库地址，配置成私服地址即可，注意是group的仓库的地址
+
 **distributionManagement ： 主要是用于将本地的程序打包部署到maven私服上用，这里的id name 需要跟setting.xml 
 文件中的 servers 节点中的id对应起来。 对于普通的项目，不需要部署到maven私服上， 不配置这段也可以。**
 
@@ -274,9 +275,7 @@ repositories : 中央仓库地址，配置成私服地址即可，注意是group
 
 上传后，就像配置正常的依赖一样，配置对应的依赖引入即可。
 
-当然，maven提供了一个命令行的方式上传jar包，而且在nexus3的版本中，也没有了
-
-web页面上传
+当然，maven提供了一个命令行的方式上传jar包，而且在nexus3的版本中，也没有了web页面上传
 
 命令格式为：
 

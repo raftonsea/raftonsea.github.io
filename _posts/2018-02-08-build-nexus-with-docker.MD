@@ -186,6 +186,7 @@ docker也是有两个版本：社区版和企业版，企业版是收费的，�
    
    
    参考链接：
+   
    <a href="https://hub.docker.com/r/sonatype/nexus/">nexus DockerHub</a>
    
    <a href="https://docs.docker.com/engine/reference/commandline/docker/">Dokcer official commandline</a>

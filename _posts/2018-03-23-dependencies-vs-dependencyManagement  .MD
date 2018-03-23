@@ -43,16 +43,25 @@ categories: maven
 
 {% highlight java %}
  
-You should declare dependencies you want to inherit under a <dependencies> section to achieve this. <dependencyManagement> is used for definitions that must be referenced later, whenever needed, within the <dependencies> of a particular child to become effective.
+You should declare dependencies you want to inherit under a <dependencies> section to achieve this.
+ <dependencyManagement> is used for definitions that must be referenced later, whenever needed, 
+ within the <dependencies> of a particular child to become effective.
 
-UPDATE: Be careful when declaring dependencies that every child pom will inherit. Very quickly you can end up having dependencies you don't really need just because they are declared in the parent. As mentioned by other commenters, <dependencyManagement> may be a better choice, although it isn't what you wanted originally.
+UPDATE: Be careful when declaring dependencies that every child pom will inherit. Very quickly you 
+can end up having dependencies you don't really need just because they are declared in the parent. 
+As mentioned by other commenters, <dependencyManagement> may be a better choice, although it isn't 
+what you wanted originally.
 
 {% endhighlight %}
 
 
 
 {% highlight java %}
-If you goal is to inherit particular dependencies to all child poms, without a need to decleare them in each of the children - then yes, you should declare them within <dependencies> and not <dependencyManagement>. On the other hand, a dependency declared within <dependencyManagement> can be used only when you need it in a child pom - you just write its group and artifact inside that child's <dependencies>
+If you goal is to inherit particular dependencies to all child poms, without a need to decleare them in 
+each of the children - then yes, you should declare them within <dependencies> and not 
+<dependencyManagement>. On the other hand, a dependency declared within <dependencyManagement> can be 
+used only when you need it in a child pom - you just write its group and artifact inside that child's 
+<dependencies>
 {% endhighlight %}
 
 如果希望的效果是：子模块不需要任何声明就可以使用这些依赖包，那么就选择dependencies标签，否则就选择dependencyManagement
@@ -68,6 +77,6 @@ If you goal is to inherit particular dependencies to all child poms, without a n
      Artifacts specified in the <dependencyManagement> section, will only be included in the child module if they were also specified in the <dependencies> section of the child module itself. Why is it good you ask? because you specify the version and/or scope in the parent, and you can leave them out when specifying the dependencies in the child POM. This can help you use unified versions for dependencies for child modules, without specifying the version in each child module
 {% endhighlight %}
 
-父pom的 <dependencies> 标签中的依赖，始终会作为依赖传递到子模块中。而<dependencyManagement> 中的依赖，只有子模块手动声明了<dependencies>才会被添加进来。
+父pom的 dependencies 标签中的依赖，始终会作为依赖传递到子模块中。而dependencyManagement 中的依赖，只有子模块手动声明了dependencies才会被添加进来。
 
-因此，我在  <dependencies> 外面添加了一层<dependencyManagement>，再次刷新，子工程的依赖变了。
+因此，我在  dependencies 外面添加了一层dependencyManagement，再次刷新，子工程的依赖变了。

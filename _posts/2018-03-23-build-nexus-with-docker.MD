@@ -1,5 +1,5 @@
 ---
-title:  "使用docker + nexus:oss 搭建maven私服"
+title:  "使用docker + nexus:oss 搭建私有仓库"
 date:  2018-03-23 13:16:01 -0600
 categories: docker
 ---

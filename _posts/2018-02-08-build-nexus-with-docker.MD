@@ -7,7 +7,7 @@ categories: docker
 使用nexus的oss版本搭建maven私服的确是很方便，但是nexus也是有环境要求的，比如不同的oss版本，对应不同的jdk版本。
 好在nexus是支持docker的，使用docker来搭建nexus oss环境，就可以不用考虑jdk的版本了，因为官方已经为我们封装好了。
 
-docker也是有两个版本：社区版和企业版，企业版是收费的，社区版是免费的，选择企业版，下载地址：<a href="https://www.docker.com/community-edition#/download"> 社区版 </a>。
+docker也是有两个版本：社区版和企业版，企业版是收费的，社区版是免费的，选择社区版，下载地址：<a href="https://www.docker.com/community-edition#/download"> 社区版 </a>。
 
 下载好以后安装，安装成功后，会在任务栏有个docker的图标。右单击，选择setting，弹出设置页面
 
@@ -59,6 +59,7 @@ docker也是有两个版本：社区版和企业版，企业版是收费的，�
  {% endhighlight %}
  
  docker pull  是执行拉取，即从dockerhub上拉取对应名称的image文件
+ 
  sonatype/nexus:oss    image 名称， oss是其对应的tag 
  
  国内直接访问docker源速度略慢，因此可以使用代理或者国内的源。
@@ -84,9 +85,13 @@ docker也是有两个版本：社区版和企业版，企业版是收费的，�
    {% endhighlight %} 
  
  docker run  启动docker容器 
+ 
  -d 以后台进程运行
+ 
  -p 端口映射， 将本地的8082 映射到容器的8081端口，因此启动后使用 localhost:8082/nexus 访问
+ 
  --name 容器的名称 
+ 
  sonatype/nexus:oss ： image镜像的名称。
  
  ![]({{ "/assets/img/20180323/docker-run.png" | absolute_url }})
@@ -131,10 +136,12 @@ docker也是有两个版本：社区版和企业版，企业版是收费的，�
    nexus 为容器名称
    
    **6、查看启动日志**
-     {% highlight java %}
+   
+   {% highlight java %}
              docker logs -f nexus
-      {% endhighlight %} 
-     nexus 为容器名称
+   {% endhighlight %} 
+      
+   nexus 为容器名称
    
    **7、设置启动参数**  
    
@@ -180,6 +187,7 @@ docker也是有两个版本：社区版和企业版，企业版是收费的，�
    
    参考链接：
    <a href="https://hub.docker.com/r/sonatype/nexus/">nexus DockerHub</a>
+   
    <a href="https://docs.docker.com/engine/reference/commandline/docker/">Dokcer official commandline</a>
    
    

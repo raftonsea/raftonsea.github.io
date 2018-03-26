@@ -2,6 +2,7 @@
 title:  "使用docker + nexus:oss 搭建私有仓库"
 date:  2018-03-23 13:16:01 -0600
 categories: docker
+layout: post
 ---
 
 使用nexus的oss版本搭建maven私服的确是很方便，但是nexus也是有环境要求的，比如不同的oss版本，对应不同的jdk版本。

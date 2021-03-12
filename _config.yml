@@ -1,3 +1,11 @@
 theme: jekyll-theme-architect
 title: 乘桴游海 
 description: 道不行，乘桴浮于海
+
+
+
+defaults:
+  - scope:
+      path: "assets/geek"
+    values:
+      geek: true

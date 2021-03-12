@@ -26,6 +26,4 @@ xxxxx
  
   <a href="{{ site.url }}/{{ myimage.path }}">{{ myimage.path }}</a>
 {% endfor %}
-
-
-xx---------
+ 

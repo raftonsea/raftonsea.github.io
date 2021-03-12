@@ -20,9 +20,11 @@
 
 <br />
 xxxxx
-{% assign image_files = site.static_files %}
+
+{% assign image_files = site.static_files | where: "geek", true %}
 {% for myimage in image_files %}
   {{ myimage.path }}
 {% endfor %}
+
 
 xx---------

@@ -23,7 +23,8 @@ xxxxx
 
 {% assign image_files = site.static_files | where: "geek", true %}
 {% for myimage in image_files %}
-  {{ myimage.path }}
+ 
+  <a href="{{ site.url }}/{{ myimage.path }}">{{ myimage.path }}</a>
 {% endfor %}
 
 

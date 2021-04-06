@@ -170,7 +170,7 @@ read -p "是否停止上述进程 y/n ?" y_input
 test_val='1'
 if [ $test_val == '1' ]
         then
-        echo 'succee'
+        echo 'success'
 fi
 ~~~
 

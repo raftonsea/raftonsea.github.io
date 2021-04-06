@@ -139,7 +139,7 @@ full_path=/home/${fold_pre}_video
 
 ##### 读取键盘输入
 
-使用 read 命令
+- 直接使用 read 命令
 
 常有一些需要交互的脚本，比如显示出符合条件的进程id，让用户确认是否停止这些pid:
 
@@ -151,11 +151,19 @@ echo $stop_flag
 
 直接输入 read 变量 ，则当前shell 将阻塞等待输入数据。
 
+- read 命令增加参数
+
+~~~shell
+read -p "是否停止上述进程 y/n ?" y_input
+~~~
+
+-p 即promote的意思，可以增加一串提示信息，同时后面增加一个变量，输入的内容将赋值给这个变量。
+
 
 
 ##### 判断
 
-if 配合中括号
+- if 配合中括号
 
 ~~~shell
 #!/bin/bash
@@ -175,6 +183,22 @@ if 的格式：
 fi
 
 **中括号里面的内容，每一项前后都要有空格。**
+
+- 多个判断条件
+
+  ~~~shell
+  #!/bin/bash
+  test_val='1'
+  t='11'
+  if [ $test_val  == '1' ] && [ $t == '1' ]
+          then
+          echo 'succee'
+  else
+          echo 'fail'
+  fi
+  ~~~
+
+  通过 && 连接多个中括号即可。
 
 
 

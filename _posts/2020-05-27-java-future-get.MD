@@ -152,7 +152,7 @@ public class FutureTask<V> implements RunnableFuture<V>
                 else if (!queued)
                     queued = UNSAFE.compareAndSwapObject(this, waitersOffset,
                                                          q.next = waiters, q); // 当 #2 执行完以后，下一轮的循环将进入这个方法
-                                                         // Doug Lea 大神用了一个很巧妙的写法： q.next = waiters . 将当前新建的节点
+                                                         //  q.next = waiters . 将当前新建的节点
                                                          // q 的下一个节点设置为 waiters （此时为 null） ,  q.next = waiters 的结果为 waiters
                                                          //  即这个 CAS 的做法是：将 waiters（此时为null） 设置为新建的 p ，而 p.next 为 null 
                                                          // 若此时多个线程执行到该方法，则保证了 多个线程构成了一个 链表，每个节点的 next 指向

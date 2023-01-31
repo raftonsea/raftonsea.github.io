@@ -6,8 +6,6 @@ categories: maven private resp
 
 
 这几天由于项目的关系，需要公司内部搭建一个maven私服，将jar都托管上去。同时，也需要将版本控制工具换成Git，搭一套Git服务。
-顺道复习了一下maven私服的搭建，记录一下，也是答应了超哥写一篇博客给他看。(*^__^*)  
-
 
 maven私服搭建的工具有很多，可以是nexus，artifactory 等，这里选择的是nexus。
 nexus 也有两个版本 oss  和pro 版本， oss 是开源的， pro 是收费的，选择 nexus oss版本 。
